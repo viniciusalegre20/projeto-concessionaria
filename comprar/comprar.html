@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <title>Cartopia compra</title>
+</head>
+
+<body>
+    <main class="p-5">
+        <form method="post" action="https://www.w3schools.com/action_page.php" target="_top">
+            <div class="container-fluid">
+                <div class="col">
+                    <div class="text-center mt-4">
+                        <p class="font-weight-bold">Agradecemos pelo interesse!</p>
+                        <p>Nossa empresa agradece pela preferencia em nossos serviços, por favor
+                            preencha as informações abaixo para entrarmos em contato com as
+                            informações de reserva.</p>
+                    </div>
+                </div>
+
+                <div class="row text-center">
+                    <div class="col">
+                        <label for="nome1">Primeiro nome: </label>
+                        <input class="rounded" type="text" id="nome1" name="nome1" placeholder="Ana Maria">
+                    </div>
+                    <div class="col">
+                        <label for="nome2">Sobrenome: </label>
+                        <input class="rounded" type="text" id="nome2" name="nome2" placeholder="Antunes">
+                    </div>
+                    <div class="col">
+                        <label for="nome3">Como deseja ser tratado? </label>
+                        <input class="rounded" type="text" id="nome3" name="nome3" placeholder="Senhor, Senhora, etc">
+                    </div>
+                </div>
+                <br>
+                <div class=" row text-center">
+                    <div class="col">
+                        <label for="cpf">CPF: </label>
+                        <input class="rounded" type="text" id="cpf" name="cpf" placeholder="11111111111" required>
+                    </div>
+                    <div class="col">
+                        <label for="endereco">Endereço: </label>
+                        <input class="rounded" type="text" id="endereco" name="endereco"
+                            placeholder="Rua das Flores, n°13">
+                    </div>
+                    <br>
+                </div>
+                <br>
+                <div class="row text-center">
+                    <div class="form-check col">
+                        <p class="mb-1">Forma de contato: </p>
+                        <div class="col">
+                            <label for="opcao1">Email</label>
+                            <input type="radio" name="opcao" value="email" id="opcao1" checked>
+                        </div>
+                        <div class="col">
+                            <label for="opcao2">Ligação</label>
+                            <input type="radio" name="opcao" value="telefone" id="opcao2">
+                        </div>
+                        <div class="col">
+                            <label for="opcao3">WhatsApp</label>
+                            <input type="radio" name="opcao" value="whats" id="opcao3">
+                        </div>
+                    </div>
+                    <div class="col mt-5">
+                        <div class="col" id="resultado">
+                            <label>Email: </label>
+                            <input class="rounded" type="email" id="contato" name="email" placeholder="ana@email.com"
+                                required />
+                        </div>
+                    </div>
+                    <div class="form-check mt-4">
+                        <p>Carro(s) de interesse: </p>
+                        <div class="row">
+                            <div class="col"> <input type="checkbox" name="carros" id="porshe" value="porshe">
+                                <label for="porshe">Porshe 911 Turbo S </label>
+                            </div>
+                            <div class="col"> <input type="checkbox" name="carros" id="bmw" value="bmw">
+                                <label for="bmw">BMW M3 Competition</label>
+                            </div>
+                            <div class="col"> <input type="checkbox" name="carros" id="lamborghini" value="lamborghini">
+                                <label for="lamborghini">Lamborghini Huracan STO</label>
+                            </div>
+                            <div class="col"> <input type="checkbox" name="carros" id="mc" value="mc">
+                                <label for="mc">McLaren 750s</label>
+                            </div>
+                            <div class="col"> <input type="checkbox" name="carros" id="mercedes" value="mercedes">
+                                <label for="mercedes">Mercedes AMG GTR</label>
+                            </div>
+                            <div class="col"> <input type="checkbox" id="nissan" name="carros" value="nissan">
+                                <label for="nissan">Nissan GTR</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>Após recebermos as informações, o processo de análise de perfil será iniciado e retornaremos assim
+                    que possível.</p>
+                <button class="p-2 .bg-light text-danger border-danger rounded" type="submit">Enviar</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

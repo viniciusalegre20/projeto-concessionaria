@@ -1,0 +1,141 @@
+
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: dimgrey;
+}
+
+.header {
+    display: flex;
+    box-sizing: border-box;
+    height: 70px;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    gap: 0.5rem;
+    list-style: none;
+}
+
+.menu a{
+    display: block;
+    padding: 0.5rem;
+    color: black;
+    text-decoration: none;
+}
+.menu a:hover{
+    color: dimgray;
+}
+#modelos{
+    color: red;
+}
+#button{
+    display: none;
+}
+
+/**aparecer somente em telas com menos de 600px**/
+@media (max-width:600px){
+    #button{
+        display: flex;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        border: none;
+        background: none;
+        cursor: pointer;/* deixa a mãozinha para clicar*/
+        gap: 0.5rem;
+    }
+    .menu{
+        display: block;
+        position: absolute; /*deixa por cima de qualquer conteudo da tela*/
+        width: 100%;
+        height: 0px;
+        top: 70px;
+        right: 0px;
+        background-color: darkgrey;
+        visibility: hidden; 
+        overflow-y: hidden;/*esconde enquanto não tem o tamanho total*/
+        transition: 0.6s; /*cria animação bonitinha*/
+
+    }
+    #nav.active .menu{
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto; /*deixa automatico e se tiver muitos itens cria a barrinha pra rolar o menu*/
+
+    }
+    .menu a{
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 2px solid rgba(0, 0, 0, .05);
+
+    }
+/*********fazer as 3 barrinhas************/
+    .hamburguer{
+        border-top: 2px solid;
+        width: 20px;
+    }
+    .hamburguer::after, .hamburguer::before{
+        content: ''; /*o after e o before precisam de um conteudo para existir*/
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor; /*deixa da cor que estiver a borda "original"*/
+        margin-top: 5px;
+        position: relative;
+        transition: 0.3s;
+    }
+
+    /****transformar as barrinhas em x quando estiver aberto*****/
+    #nav.active .hamburguer{
+        border-top-color: transparent;
+
+    }
+    #nav.active .hamburguer::before{
+        transform: rotate(135deg);
+    }
+    #nav.active .hamburguer::after{
+        transform: rotate(-135deg);
+        top: -7px; /*tira 7px da altura, para alinhas com a outra barrinha*/
+    
+    }
+
+}
+.footer{
+    margin-top: 20px;
+    display: flex;
+    height: 150px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10%;
+    background-color: rgb(238, 237, 237);
+}
+
+.footer a{
+    font-size: 30px;
+    color: black;
+    text-decoration: none;
+}
+.card1{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+.card1 img{
+    margin-left: 10px;
+    margin-top: 3px;
+}
+.face{
+    margin-bottom: 5px;
+}
